@@ -5,7 +5,7 @@ Windows 全域語音輸入工具。按住熱鍵說話，放開後自動辨識並
 ## 功能
 
 - 按住熱鍵錄音，放開即自動貼上，不需切換視窗
-- 雙模型：F4 精準模式（medium）、F3 快速模式（small）
+- 雙模型：F7 精準模式（medium）、F8 快速模式（small）
 - 自動偵測中英文，遇到日韓文自動強制切換中文重辨識
 - 系統匣常駐，右鍵結束
 
@@ -34,8 +34,8 @@ pip install faster-whisper sounddevice numpy keyboard pyperclip pystray Pillow
 
 | 動作 | 說明 |
 |------|------|
-| 按住 `F4` | 精準模式錄音（medium 模型） |
-| 按住 `F3` | 快速模式錄音（small 模型） |
+| 按住 `F7` | 精準模式錄音（medium 模型） |
+| 按住 `F8` | 快速模式錄音（small 模型） |
 | 放開 | 自動辨識並貼到原本的視窗 |
 | 系統匣右鍵 → 結束 | 關閉程式 |
 
@@ -49,8 +49,8 @@ pip install faster-whisper sounddevice numpy keyboard pyperclip pystray Pillow
 編輯 `voice_typer.py` 開頭：
 
 ```python
-HOTKEY          = 'f4'      # 精準模式熱鍵
-HOTKEY_FAST     = 'f3'      # 快速模式熱鍵
+HOTKEY          = 'f7'      # 精準模式熱鍵
+HOTKEY_FAST     = 'f8'      # 快速模式熱鍵
 MODEL_SIZE      = 'medium'  # tiny / base / small / medium
 MODEL_SIZE_FAST = 'small'   # tiny / base / small / medium
 LANGUAGE        = None      # None=自動偵測；'zh'=純中文

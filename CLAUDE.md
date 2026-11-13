@@ -22,7 +22,8 @@ cd <此專案資料夾>; Start-Process pythonw -ArgumentList "voice_typer_tray.p
 ## 設定（voice_typer.py 開頭）
 
 ```python
-HOTKEY      = 'f4'      # 按住錄音的熱鍵
+HOTKEY      = 'f7'      # 精準模式熱鍵（按住錄音）
+HOTKEY_FAST = 'f8'      # 快速模式熱鍵（small 模型）
 MODEL_SIZE  = 'medium'  # tiny / base / small / medium（越大越準但越慢）
 LANGUAGE    = None      # None=自動偵測中英文；'zh'=純中文
 MIN_SECONDS = 0.4       # 低於此秒數的錄音忽略
@@ -31,7 +32,7 @@ MIN_SECONDS = 0.4       # 低於此秒數的錄音忽略
 ## 使用
 
 - 右下角**綠色**圓圈 = 待機
-- 按住 `F4` → 變紅，說話
+- 按住 `F7`（精準）或 `F8`（快速） → 變紅，說話
 - 放開 → 變藍（辨識中）→ 自動切回原視窗貼上
 - 右鍵圖示 → 結束
 
@@ -44,11 +45,11 @@ pip install faster-whisper sounddevice numpy keyboard pyperclip pystray Pillow
 模型快取：`%USERPROFILE%\.cache\huggingface\hub\`（首次啟動自動下載 medium 約 769 MB）
 
 ## 上次做到哪
-- 專案從 `D:\coding\test\` 搬移過來，完成接手初始化
-- 修正 `啟動語音輸入.vbs` 路徑（改用 `WScript.ScriptFullName` 相對定位，跨電腦可用）
-- 補建 `.gitignore`、`README.md`
-- 新增 F3 快速模式熱鍵，使用 `small` 模型（F4 維持 `medium`）
-- 移除所有絕對路徑，改為相對路徑或環境變數
+- 熱鍵由 F4 / F3 改為 F7（精準 medium）/ F8（快速 small），避開 Claude 等程式的快捷鍵，README 與本檔同步更新
+- 補寫完整 README.md（安裝、使用、設定、系統需求）
+- 新增 MIT LICENSE
+- 初始化 git repo，建立公開 GitHub repo 並推送
+- GitHub：https://github.com/FengLingYu7563/VoiceTyper
 
 ## 待辦事項
 - 確認 VBS 在目標電腦上可正常啟動

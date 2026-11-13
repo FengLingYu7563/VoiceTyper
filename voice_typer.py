@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 VoiceTyper - 全域語音輸入工具
-按住 Right Ctrl 說話，放開後自動貼上文字到任何視窗
+按住 F7 說話，放開後自動貼上文字到任何視窗
 """
 
 import threading
@@ -14,12 +14,12 @@ import winsound
 from faster_whisper import WhisperModel
 
 # ── 設定 ──────────────────────────────────────────────
-HOTKEY     = 'f4'  # 按住錄音的按鍵
+HOTKEY     = 'f7'  # 按住錄音的按鍵
 SAMPLE_RATE = 16000
 MODEL_SIZE  = 'medium'     # tiny / base / small / medium（越大越準但越慢）
 LANGUAGE    = None         # None = 自動偵測（中英混打用這個）；純中文可改 'zh'
 MIN_SECONDS = 0.4          # 低於這個秒數的錄音直接忽略
-HOTKEY_FAST     = 'f3'    # 快速模式熱鍵（base 模型）
+HOTKEY_FAST     = 'f8'    # 快速模式熱鍵（small 模型）
 MODEL_SIZE_FAST = 'small'  # tiny / base / small / medium
 # ─────────────────────────────────────────────────────
 
