@@ -21,6 +21,12 @@ LANGUAGE    = None         # None = 自動偵測（中英混打用這個）；�
 MIN_SECONDS = 0.4          # 低於這個秒數的錄音直接忽略
 HOTKEY_FAST     = 'f8'    # 快速模式熱鍵（small 模型）
 MODEL_SIZE_FAST = 'small'  # tiny / base / small / medium
+
+# 佇列模式（系統匣版本才有）
+AUTO_PASTE   = False  # True = 辨識完自動切回原視窗貼上（舊行為）
+HOTKEY_PASTE = 'f9'   # 按一下貼上佇列中最早一筆到「目前」的游標處
+QUEUE_MAX    = 20     # 佇列最多保留幾筆，超過自動丟掉最舊的
+SOUND        = True   # 提示音總開關（太短的嗶聲幾乎聽不見，長度已調整過）
 # ─────────────────────────────────────────────────────
 
 
